@@ -18,6 +18,11 @@
 			<id>cloudera2</id>
 			<url>https://repository.cloudera.com/content/groups/public</url>
 		</repository>
+		 <!-- Repository where we can found the storm dependencies  -->
+        <repository>
+            <id>clojars.org</id>
+            <url>http://clojars.org/repo</url>
+        </repository>
 	</repositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +30,14 @@
 
 
 	<dependencies>
+	    <!-- Storm Dependency -->
+        <dependency> 
+          <groupId>org.apache.storm</groupId>
+          <artifactId>storm-core</artifactId>
+          <version>0.9.1-incubating</version>
+          <!-- <scope>provided</scope> -->
+       </dependency>
+	
 		<dependency>
 			<groupId>jdk.tools</groupId>
 			<artifactId>jdk.tools</artifactId>
@@ -113,6 +126,13 @@
 			<artifactId>hbase-it</artifactId>
 			<version>0.98.1-cdh5.1.0</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-thrift</artifactId>
+			<version>0.98.1-cdh5.1.0</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
