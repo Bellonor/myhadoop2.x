@@ -1,14 +1,8 @@
-package com.jamesfen.hbase;
+package com.jamesfen.hbasethrift;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.hadoop.hbase.thrift2.generated.TColumnValue;
-import org.apache.hadoop.hbase.thrift2.generated.TGet;
-import org.apache.hadoop.hbase.thrift2.generated.THBaseService;
-import org.apache.hadoop.hbase.thrift2.generated.TIOError;
-import org.apache.hadoop.hbase.thrift2.generated.TPut;
-import org.apache.hadoop.hbase.thrift2.generated.TResult;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
@@ -38,6 +32,7 @@ public class ThriftExample {
 	    boolean framed = false;
 
 	    TTransport transport = new TSocket(host, port, timeout);
+	    
 	    if (framed) {
 	      transport = new TFramedTransport(transport);
 	    }

@@ -69,7 +69,7 @@ public class DemoClient {
     ByteBuffer table = ByteBuffer.wrap("blog".getBytes());
 
     TPut put = new TPut();
-    put.setRow("101".getBytes());
+    put.setRow("103".getBytes());
 
     TColumnValue columnValue = new TColumnValue();
     columnValue.setFamily("article".getBytes());
@@ -82,16 +82,16 @@ public class DemoClient {
     client.put(table, put);
 
     TGet get = new TGet();
-    get.setRow("1".getBytes());
+    get.setRow("102".getBytes());
 
     TResult result = client.get(table, get);
 
     System.out.print("row = " + new String(result.getRow()));
     for (TColumnValue resultColumnValue : result.getColumnValues()) {
-      System.out.print("family = " + new String(resultColumnValue.getFamily()));
-      System.out.print("qualifier = " + new String(resultColumnValue.getFamily()));
-      System.out.print("value = " + new String(resultColumnValue.getValue()));
-      System.out.print("timestamp = " + resultColumnValue.getTimestamp());
+      System.out.print(",family = " + new String(resultColumnValue.getFamily()));
+      System.out.print(",qualifier = " + new String(resultColumnValue.getFamily()));
+      System.out.print(",value = " + new String(resultColumnValue.getValue()));
+      System.out.print(",timestamp = " + resultColumnValue.getTimestamp());
     }
     
     transport.close();
