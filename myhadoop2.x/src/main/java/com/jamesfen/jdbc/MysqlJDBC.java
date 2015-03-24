@@ -11,13 +11,13 @@ public class MysqlJDBC {
 	private static String DRIVER = "com.mysql.jdbc.Driver";
 	//获得url
 	//private static String URL = "jdbc:mysql://10.17.36.121/appmgt";
-	private static String URL = "jdbc:mysql://10.8.64.234/appmgt";
+	private static String URL = "jdbc:mysql://10.17.36.121/appmgt";
 	//获得连接数据库的用户名
-	//private static String USER = "bigdata";
-	private static String USER = "hadoop";
+	private static String USER = "bigdata";
+	//private static String USER = "hadoop";
 	//获得连接数据库的密码
-	//private static String PASS ="bigdata";
-	private static String PASS ="hadoop";
+	private static String PASS ="bigdata";
+	//private static String PASS ="hadoop";
 	//连接对象
 	private Connection connection;
 	//维护一个本类型的对象

@@ -20,9 +20,9 @@ public class GenHiveTable {
 		StringBuilder sb1=new StringBuilder();
 		StringBuilder sb2=new StringBuilder();
 		String head="CREATE EXTERNAL TABLE bigtable_bd ("
-				+ "\nKEY string,\n";
+				+ "\nKEY string,\nMONTH_ID INT,\n";
 		String middle="\n) STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler' WITH SERDEPROPERTIES (" 
-				+"\n \"hbase.columns.mapping\" = \":key,\n";
+				+"\n \"hbase.columns.mapping\" = \":key,\nbd:MONTH_ID#b,\n";
 		String tail="\n) TBLPROPERTIES ("
                     +"\n \"hbase.table.name\" = \"bigtable\");";
 		//为hbase增加不存在的字段
