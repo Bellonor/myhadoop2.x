@@ -18,11 +18,11 @@
 			<id>cloudera2</id>
 			<url>https://repository.cloudera.com/content/groups/public</url>
 		</repository>
-		 <!-- Repository where we can found the storm dependencies  -->
-        <repository>
-            <id>clojars.org</id>
-            <url>http://clojars.org/repo</url>
-        </repository>
+		<!-- Repository where we can found the storm dependencies -->
+		<repository>
+			<id>clojars.org</id>
+			<url>http://clojars.org/repo</url>
+		</repository>
 	</repositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,14 +30,14 @@
 
 
 	<dependencies>
-	    <!-- Storm Dependency -->
-        <dependency> 
-          <groupId>org.apache.storm</groupId>
-          <artifactId>storm-core</artifactId>
-          <version>0.9.1-incubating</version>
-          <!-- <scope>provided</scope> -->
-       </dependency>
-	
+		<!-- Storm Dependency -->
+		<dependency>
+			<groupId>org.apache.storm</groupId>
+			<artifactId>storm-core</artifactId>
+			<version>0.9.1-incubating</version>
+			<!-- <scope>provided</scope> -->
+		</dependency>
+
 		<dependency>
 			<groupId>jdk.tools</groupId>
 			<artifactId>jdk.tools</artifactId>
@@ -126,17 +126,17 @@
 			<artifactId>hbase-it</artifactId>
 			<version>0.98.1-cdh5.1.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.hbase</groupId>
 			<artifactId>hbase-thrift</artifactId>
 			<version>0.98.1-cdh5.1.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>2.2.1</version>
+			<version>2.6.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
@@ -148,8 +148,49 @@
 			<artifactId>helix-core</artifactId>
 			<version>0.6.4</version>
 		</dependency>
+		<!-- lucene jar -->
+		<!-- <dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-highlighter</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-memory</artifactId>
+			<version>5.0.0</version>
+		</dependency> -->
 		<!--spring-hadoop -->
 		<!-- <dependency> <groupId>org.springframework.data</groupId> <artifactId>spring-data-hadoop</artifactId> 
 			<version>2.0.2.RELEASE</version> </dependency> -->
+	    <dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queries</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-test-framework</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-common</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+	    <dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queryparser</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -13,6 +13,7 @@ public class HelloRedis {
 		redis.set("name", "wangjun1"); 
         redis.set("id", "123456"); 
         redis.set("address", "guangzhou"); 
+     
         
         Set keys = redis.keys("*");//列出所有的key，查找特定的key如：redis.keys("foo") 
         Iterator t1=keys.iterator(); 
