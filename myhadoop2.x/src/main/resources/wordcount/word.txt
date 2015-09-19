@@ -1,0 +1,4 @@
+apple 
+The definition of the input type is a bit strange
+apple
+apple
